@@ -1,4 +1,5 @@
 import Antigravity from "./components/backgrounds/Antigravity"
+import Aurora from "./components/backgrounds/Aurora"
 
 const backgrounds = {
   antigravity: {
@@ -19,6 +20,15 @@ const backgrounds = {
       pulseSpeed: 3,
       particleShape: "capsule",
       fieldStrength: 10,
+    },
+  },
+
+  aurora: {
+    component: Aurora,
+    props: {
+      colorStops: ["#5227FF", "#7cff67", "#5227FF"],
+      amplitude: 1,
+      blend: 0.5,
     },
   },
 }

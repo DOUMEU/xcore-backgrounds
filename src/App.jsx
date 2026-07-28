@@ -63,12 +63,12 @@ const backgrounds = {
   beams: {
     component: Beams,
     props: {
-      speed: 0.1,
-      noiseIntensity: 0.5,
-      scale: 1,
-      beamNumber: 10,
-      beamWidth: 1,
-      beamHeight: 1,
+      speed: 2,
+      noiseIntensity: 1.75,
+      scale: 0.2,
+      beamNumber: 12,
+      beamWidth: 2,
+      beamHeight: 15,
       lightColor: "#ffffff",
       rotation: 0,
     },

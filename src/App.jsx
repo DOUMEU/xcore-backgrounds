@@ -91,7 +91,7 @@ function App() {
         height: "100vh",
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "#111",
+        backgroundColor: "#09090B",
       }}
     >
       <ActiveBackground {...selected.props} />

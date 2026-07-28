@@ -1,8 +1,7 @@
 import Antigravity from "./components/backgrounds/Antigravity"
 import Aurora from "./components/backgrounds/Aurora"
 import Balatro from "./components/backgrounds/Balatro"
-
-
+import Ballpit from "./components/backgrounds/Ballpit"
 
 const backgrounds = {
   antigravity: {
@@ -46,6 +45,18 @@ const backgrounds = {
       color3: "#162325",
     },
   },
+
+  ballpit: {
+    component: Ballpit,
+    props: {
+      count: 100,
+      gravity: 0.5,
+      friction: 0.9975,
+      wallBounce: 0.95,
+      followCursor: true,
+      colors: ["#5227FF", "#7cff67", "#ff6b6b"],
+    },
+  },
 }
 
 function App() {
@@ -60,11 +71,11 @@ function App() {
   return (
     <main
       style={{
-        width: "100%",
+        width: "100vw",
         height: "100vh",
         position: "relative",
         overflow: "hidden",
-        background: "#000",
+        backgroundColor: "#111",
       }}
     >
       <ActiveBackground {...selected.props} />

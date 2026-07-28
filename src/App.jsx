@@ -1,5 +1,8 @@
 import Antigravity from "./components/backgrounds/Antigravity"
 import Aurora from "./components/backgrounds/Aurora"
+import Balatro from "./components/backgrounds/Balatro"
+
+
 
 const backgrounds = {
   antigravity: {
@@ -29,6 +32,18 @@ const backgrounds = {
       colorStops: ["#5227FF", "#7cff67", "#5227FF"],
       amplitude: 1,
       blend: 0.5,
+    },
+  },
+
+  balatro: {
+    component: Balatro,
+    props: {
+      isRotate: false,
+      mouseInteraction: true,
+      pixelFilter: 745,
+      color1: "#DE443B",
+      color2: "#006BB4",
+      color3: "#162325",
     },
   },
 }

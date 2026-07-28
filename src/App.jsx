@@ -2,6 +2,8 @@ import Antigravity from "./components/backgrounds/Antigravity"
 import Aurora from "./components/backgrounds/Aurora"
 import Balatro from "./components/backgrounds/Balatro"
 import Ballpit from "./components/backgrounds/Ballpit"
+import Beams from "./components/backgrounds/Beams"
+
 
 const backgrounds = {
   antigravity: {
@@ -57,6 +59,20 @@ const backgrounds = {
       colors: ["#5227FF", "#7cff67", "#ff6b6b"],
     },
   },
+
+  beams: {
+    component: Beams,
+    props: {
+      speed: 0.1,
+      noiseIntensity: 0.5,
+      scale: 1,
+      beamNumber: 10,
+      beamWidth: 1,
+      beamHeight: 1,
+      lightColor: "#ffffff",
+      rotation: 0,
+    },
+  }
 }
 
 function App() {

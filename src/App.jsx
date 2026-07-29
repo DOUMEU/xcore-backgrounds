@@ -5,6 +5,14 @@ import Ballpit from "./components/backgrounds/Ballpit";
 import Beams from "./components/backgrounds/Beams";
 import ClickSpark from "./components/backgrounds/ClickSpark";
 import ColorBends from "./components/backgrounds/ColorBends";
+import DarkVeil from "./components/backgrounds/DarkVeil";
+import Dither from "./components/backgrounds/Dither";
+import DotField from "./components/backgrounds/DotField";
+import DotGrid from "./components/backgrounds/DotGrid";
+import EvilEye from "./components/backgrounds/EvilEye";
+import FaultyTerminal from "./components/backgrounds/FaultyTerminal";
+import Ferrofluid from "./components/backgrounds/Ferrofluid";
+import FloatingLines from "./components/backgrounds/FloatingLines";
 
 import SplitTextPage from "./pages/text-animations/SplitTextPage";
 
@@ -107,6 +115,132 @@ const backgrounds = {
       iterations: 1,
       intensity: 1.5,
       bandWidth: 6,
+    },
+  },
+
+  darkveil: {
+    component: DarkVeil,
+    props: {
+      hueShift: 0.5,
+      noiseIntensity: 0,
+      scanlineIntensity: 0.5,
+      Speed: 0.5,
+      ScanlineFrequency: 0,
+      warpAmount: 0.0,
+    },
+  },
+
+  dither: {
+    component: Dither,
+    props: {
+      waveSpeed: 0.05,
+      waveFrequency: 3,
+      waveAmplitude: 0.3,
+      waveColor: [0.5, 0.5, 0.5],
+      colorNum: 4,
+      pixelSize: 2,
+      disableAnimation: false,
+      enableMouseInteraction: true,
+      mouseRadius: 1,
+    },
+  },
+
+  dotfield: {
+    component: DotField,
+    props: {
+      dotRadius: 1.5,
+      dotSpacing: 14,
+      cursorRadius: 500,
+      cursorForce: 0.1,
+      bulgeOnly: true,
+      bulgeStrength: 67,
+      glowRadius: 160,
+      sparkle: false,
+      waveAmplitude: 0,
+      gradientFrom: "rgba(168, 85, 247, 0.35)",
+      gradientTo: "rgba(180, 151, 207, 0.25)",
+      glowColor: "#120F17",
+    },
+  },
+
+  dotgrid: {
+    component: DotGrid,
+    props: {
+      dotSize: 16,
+      gap: 32,
+      baseColor: "#5227FF",
+      activeColor: "#5227FF",
+      proximity: 150,
+      speedTrigger: 100,
+      shockRadius: 250,
+      shockStrength: 5,
+      maxSpeed: 5000,
+      resistance: 750,
+      returnDuration: 1.5,
+    },
+  },
+
+  evileye: {
+    component: EvilEye,
+    props: {
+      pupilSize: 20,
+      irisColor: "#5227FF",
+      pupilColor: "#000000",
+      glowColor: "#ffffff",
+      glowIntensity: 0.5,
+    },
+  },
+
+  faultyterminal: {
+    component: FaultyTerminal,
+    props: {
+      scale: 1.5,
+      gridMul: [2, 1],
+      digitSize: 2,
+      timeScale: 0.5,
+      pause: false,
+      scanlineIntensity: 0.5,
+      glitchAmount: 1,
+      flickerAmount: 1,
+      noiseAmp: 1,
+      chromaticAberration: 0,
+      dither: 0,
+      curvature: 0.1,
+      tint: "#A7EF9E",
+      mouseReact: true,
+      mouseStrength: 0.5,
+      pageLoadAnimation: true,
+      brightness: 0.5,
+    },
+  },
+
+  ferrofluid: {
+    component: Ferrofluid,
+    props: {
+      particleCount: 1000,
+      particleSize: 2,
+      magneticFieldStrength: 1,
+      noiseIntensity: 0.1,
+      colorPalette: ["#5227FF", "#FF9FFC", "#7CFF67"],
+    },
+  },
+
+  floatinglines: {
+    component: FloatingLines,
+    props: {
+      enabledWaves: ["top", "middle", "bottom"],
+      // Array - specify line count per wave; Number - same count for all waves
+      lineCount: 8,
+      // Array - specify line distance per wave; Number - same distance for all waves
+      lineDistance: 8,
+      bendRadius: 8,
+      bendStrength: -2,
+      interactive: true,
+      parallax: true,
+      animationSpeed: 1,
+      gradientStart: "#5227FF",
+      gradientMiddle: "#FF9FFC",
+      gradientEnd: "#7CFF67",
     },
   },
 };

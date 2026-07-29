@@ -1,9 +1,11 @@
-import Antigravity from "./components/backgrounds/Antigravity"
-import Aurora from "./components/backgrounds/Aurora"
-import Balatro from "./components/backgrounds/Balatro"
-import Ballpit from "./components/backgrounds/Ballpit"
-import Beams from "./components/backgrounds/Beams"
+import Antigravity from "./components/backgrounds/Antigravity";
+import Aurora from "./components/backgrounds/Aurora";
+import Balatro from "./components/backgrounds/Balatro";
+import Ballpit from "./components/backgrounds/Ballpit";
+import Beams from "./components/backgrounds/Beams";
+import ClickSpark from "./components/backgrounds/ClickSpark";
 
+import SplitTextPage from "./pages/text-animations/SplitTextPage";
 
 const backgrounds = {
   antigravity: {
@@ -72,17 +74,38 @@ const backgrounds = {
       lightColor: "#ffffff",
       rotation: 0,
     },
-  }
-}
+  },
+
+  clickSpark: {
+    component: ClickSpark,
+    props: {
+      sparkColor: "#ffffff",
+      sparkSize: "10",
+      sparkRadius: 15,
+      sparkCount: 8,
+      duration: 400,
+      easing: "ease-out",
+      extraScale: 1.0,
+    },
+  },
+};
+
+const textAnimations = {
+  "split-text": SplitTextPage,
+  // "blur-text": BlurTextPage,
+  // "shiny-text": ShinyTextPage,
+};
 
 function App() {
-  const params = new URLSearchParams(window.location.search)
-  const backgroundName = params.get("bg") || "antigravity"
+  const params = new URLSearchParams(window.location.search);
 
-  const selected =
-    backgrounds[backgroundName] || backgrounds.antigravity
+  const backgroundName = params.get("bg");
+  const textAnimationName = params.get("text");
 
-  const ActiveBackground = selected.component
+  const selected = backgroundName ? backgrounds[backgroundName] : null;
+
+  const ActiveBackground = selected?.component;
+  const ActiveTextAnimation = textAnimations[textAnimationName];
 
   return (
     <main
@@ -94,9 +117,11 @@ function App() {
         backgroundColor: "#09090B",
       }}
     >
-      <ActiveBackground {...selected.props} />
+      {ActiveBackground && <ActiveBackground {...selected.props} />}
+
+      {ActiveTextAnimation && <ActiveTextAnimation />}
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

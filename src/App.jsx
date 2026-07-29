@@ -76,16 +76,16 @@ const backgrounds = {
     },
   },
 
-  clickSpark: {
+  clickspark: {
     component: ClickSpark,
     props: {
       sparkColor: "#ffffff",
-      sparkSize: "10",
-      sparkRadius: 15,
-      sparkCount: 8,
-      duration: 400,
+      sparkSize: 20,
+      sparkRadius: 40,
+      sparkCount: 12,
+      duration: 600,
       easing: "ease-out",
-      extraScale: 1.0,
+      extraScale: 1.2,
     },
   },
 };

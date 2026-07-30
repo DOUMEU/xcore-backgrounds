@@ -2,25 +2,25 @@ import DemoLayout from "../../components/DemoLayout";
 import SplitText from "../../components/text-animations/SplitText";
 
 function SplitTextPage() {
-  const handleAnimationComplete = () => {
-    console.log("Animation completed!");
-  };
-
   return (
     <DemoLayout>
-      <SplitText
-        text="Hello, React Bits!"
-        delay={100}
-        duration={0.6}
-        ease="power3.out"
-        splitType="chars"
-        from={{ opacity: 0, y: 40 }}
-        to={{ opacity: 1, y: 0 }}
-        threshold={0.1}
-        rootMargin="-100px"
-        textAlign="center"
-        onLetterAnimationComplete={handleAnimationComplete}
-      />
+      <div
+        style={{
+          color: "#ffffff",
+          fontSize: "40px",
+          fontWeight: "700",
+        }}
+      >
+        <SplitText
+          text="Hello, React Bits!"
+          delay={60}
+          duration={1}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+        />
+      </div>
     </DemoLayout>
   );
 }

@@ -1,30 +1,17 @@
+import DemoLayout from "../../components/DemoLayout";
 import SplitText from "../../components/text-animations/SplitText";
 
 function SplitTextPage() {
   const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
+    console.log("Animation completed!");
   };
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        inset: 0,
-        zIndex: 10,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "#ffffff",
-        fontSize: "80px",
-        fontWeight: 600,
-        textAlign: "center",
-        pointerEvents: "none",
-      }}
-    >
+    <DemoLayout>
       <SplitText
-        text="Hello, you!"
-        delay={60}
-        duration={1}
+        text="Hello, React Bits!"
+        delay={100}
+        duration={0.6}
         ease="power3.out"
         splitType="chars"
         from={{ opacity: 0, y: 40 }}
@@ -34,7 +21,7 @@ function SplitTextPage() {
         textAlign="center"
         onLetterAnimationComplete={handleAnimationComplete}
       />
-    </div>
+    </DemoLayout>
   );
 }
 

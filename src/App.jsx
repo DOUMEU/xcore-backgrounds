@@ -15,6 +15,28 @@ import Ferrofluid from "./components/backgrounds/Ferrofluid";
 import FloatingLines from "./components/backgrounds/FloatingLines";
 
 import SplitTextPage from "./pages/text-animations/SplitTextPage";
+import BlurTextPage from "./pages/text-animations/BlurTextPage";
+import CircularTextPage from "./pages/text-animations/CircularTextPage";
+import TextTypePage from "./pages/text-animations/TextTypePage";
+import ShufflePage from "./pages/text-animations/ShufflePage";
+import ShinyTextPage from "./pages/text-animations/ShinyTextPage";
+import TextPressurePage from "./pages/text-animations/TextPressurePage";
+import CurvedLoopPage from "./pages/text-animations/CurvedLoopPage";
+import FuzzyTextPage from "./pages/text-animations/FuzzyTextPage";
+import GradientTextPage from "./pages/text-animations/GradientTextPage";
+import FallingTextPage from "./pages/text-animations/FallingTextPage";
+import TextCursorPage from "./pages/text-animations/TextCursorPage";
+import DecryptedTextPage from "./pages/text-animations/DecryptedTextPage";
+import TrueFocusPage from "./pages/text-animations/TrueFocusPage";
+import ScrollFloatPage from "./pages/text-animations/ScrollFloatPage";
+import ScrollRevealPage from "./pages/text-animations/ScrollRevealPage";
+import ASCIITextPage from "./pages/text-animations/ASCIITextPage";
+import ScrambledTextPage from "./pages/text-animations/ScrambledTextPage";
+import RotatingTextPage from "./pages/text-animations/RotatingTextPage";
+import GlitchTextPage from "./pages/text-animations/GlitchTextPage";
+import ScrollVelocityPage from "./pages/text-animations/ScrollVelocityPage";
+import VariableProximityPage from "./pages/text-animations/VariableProximityPage";
+import CountUpPage from "./pages/text-animations/CountUpPage";
 
 const backgrounds = {
   antigravity: {
@@ -247,8 +269,28 @@ const backgrounds = {
 
 const textAnimations = {
   "split-text": SplitTextPage,
-  // "blur-text": BlurTextPage,
-  // "shiny-text": ShinyTextPage,
+  "blur-text": BlurTextPage,
+  "circular-text": CircularTextPage,
+  "text-type": TextTypePage,
+  shuffle: ShufflePage,
+  "shiny-text": ShinyTextPage,
+  "text-pressure": TextPressurePage,
+  "curved-loop": CurvedLoopPage,
+  "fuzzy-text": FuzzyTextPage,
+  "gradient-text": GradientTextPage,
+  "falling-text": FallingTextPage,
+  "text-cursor": TextCursorPage,
+  "decrypted-text": DecryptedTextPage,
+  "true-focus": TrueFocusPage,
+  "scroll-float": ScrollFloatPage,
+  "scroll-reveal": ScrollRevealPage,
+  "ascii-text": ASCIITextPage,
+  "scrambled-text": ScrambledTextPage,
+  "rotating-text": RotatingTextPage,
+  "glitch-text": GlitchTextPage,
+  "scroll-velocity": ScrollVelocityPage,
+  "variable-proximity": VariableProximityPage,
+  "count-up": CountUpPage,
 };
 
 function App() {

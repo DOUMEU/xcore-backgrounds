@@ -11,7 +11,7 @@ function ASCIITextPage() {
       const w = window.innerWidth;
 
       setFontSize(Math.max(120, Math.min(w * 0.22, 420)));
-      setAsciiSize(Math.max(5, Math.min(w * 0.008, 12)));
+      setAsciiSize(Math.max(6, Math.min(w * 0.008, 12)));
     };
 
     updateSize();

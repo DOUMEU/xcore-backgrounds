@@ -1,7 +1,7 @@
 function TextDemoWrapper({
   children,
   variant = "hero",
-  color = "#FFFFFF",
+  color = "#282A2E",
   align = "center",
   maxWidth = "1200px",
 }) {

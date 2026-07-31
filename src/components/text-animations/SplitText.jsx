@@ -19,6 +19,8 @@ const SplitText = ({
   rootMargin = "-100px",
   textAlign = "center",
   tag = "p",
+  autoPlay = false,
+  autoPlayInterval = 5,
   onLetterAnimationComplete,
 }) => {
   const ref = useRef(null);
@@ -88,6 +90,7 @@ const SplitText = ({
         reduceWhiteSpace: false,
         onSplit: (self) => {
           assignTargets(self);
+
           const tween = gsap.fromTo(
             targets,
             { ...from },
@@ -96,21 +99,23 @@ const SplitText = ({
               duration,
               ease,
               stagger: delay / 1000,
-              scrollTrigger: {
-                trigger: el,
-                start,
-                end: "bottom top",
-                toggleActions: "play reverse play reverse",
-                fastScrollEnd: true,
-                anticipatePin: 0.4,
+
+              repeat: autoPlay ? -1 : 0,
+              repeatDelay: autoPlay ? autoPlayInterval : 0,
+
+              onRepeat: () => {
+                gsap.set(targets, { ...from });
               },
+
               onComplete: () => {
                 onCompleteRef.current?.();
               },
+
               willChange: "transform, opacity",
               force3D: true,
             },
           );
+
           return tween;
         },
       });
@@ -141,6 +146,8 @@ const SplitText = ({
         threshold,
         rootMargin,
         fontsLoaded,
+        autoPlay,
+        autoPlayInterval,
       ],
       scope: ref,
     },

@@ -12,13 +12,16 @@ function SplitTextPage() {
         }}
       >
         <SplitText
-          text="Hello, Split Text"
+          text="Hello, React Bits!"
+          className="split-text-demo"
           delay={60}
           duration={1}
           ease="power3.out"
           splitType="chars"
           from={{ opacity: 0, y: 40 }}
           to={{ opacity: 1, y: 0 }}
+          autoPlay
+          autoPlayInterval={5}
         />
       </div>
     </DemoLayout>

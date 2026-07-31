@@ -1,0 +1,86 @@
+.docs-code-block {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: #111016;
+  color: #f3f0f7;
+}
+
+.docs-code-label {
+  min-height: 44px;
+  padding: 12px 64px 12px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #191620;
+  color: #c8c1d2;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.docs-copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 11px;
+  background: rgba(17, 16, 22, 0.92);
+  color: #e8e3ed;
+  cursor: pointer;
+
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.docs-copy-button:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: #24202c;
+  transform: translateY(-1px);
+}
+
+.docs-copy-button:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.docs-copy-button.is-copied {
+  color: #b9f6cf;
+}
+
+.docs-copy-button:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.docs-code-pre {
+  min-height: 72px;
+  margin: 0;
+  padding: 22px 70px 22px 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace;
+  font-size: 14px;
+  line-height: 1.75;
+  tab-size: 2;
+}
+
+.docs-code-pre code {
+  font-family: inherit;
+  white-space: pre;
+}

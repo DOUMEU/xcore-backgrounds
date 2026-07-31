@@ -12,7 +12,7 @@ function SplitTextPage() {
         }}
       >
         <SplitText
-          text="Hello, React Bits!"
+          text="Hello, Split Text!"
           className="split-text-demo"
           delay={60}
           duration={1}
@@ -21,7 +21,7 @@ function SplitTextPage() {
           from={{ opacity: 0, y: 40 }}
           to={{ opacity: 1, y: 0 }}
           autoPlay
-          autoPlayInterval={5}
+          autoPlayInterval={3}
         />
       </div>
     </DemoLayout>

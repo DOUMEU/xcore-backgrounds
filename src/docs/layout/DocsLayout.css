@@ -1,0 +1,78 @@
+.xcore-docs {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 32px 120px;
+  background: #0d0c10;
+  color: #ffffff;
+
+
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.xcore-docs__header,
+.xcore-docs__content {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}
+
+.xcore-docs__header {
+  margin-bottom: 64px;
+}
+
+.xcore-docs__category {
+  display: block;
+  margin-bottom: 12px;
+  color: #a39aaa;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.xcore-docs__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.xcore-docs__description {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: #aaa3b2;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.xcore-docs__content {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.xcore-docs__content .docs-code-section {
+  margin-top: 0;
+}
+
+.xcore-docs__content .docs-content-section,
+.xcore-docs__content .docs-install-section {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .xcore-docs {
+    padding: 48px 20px 80px;
+  }
+
+  .xcore-docs__header {
+    margin-bottom: 48px;
+  }
+
+  .xcore-docs__content {
+    gap: 40px;
+  }
+}

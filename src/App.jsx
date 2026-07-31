@@ -1,3 +1,5 @@
+import DocsRouter from "./docs/DocsRouter";
+
 import Antigravity from "./components/backgrounds/Antigravity";
 import Aurora from "./components/backgrounds/Aurora";
 import Balatro from "./components/backgrounds/Balatro";
@@ -295,6 +297,12 @@ const textAnimations = {
 
 function App() {
   const params = new URLSearchParams(window.location.search);
+
+  const docsPath = params.get("docs");
+
+  if (docsPath) {
+    return <DocsRouter />;
+  }
 
   const backgroundName = params.get("bg");
   const textAnimationName = params.get("text");

@@ -5,7 +5,7 @@ import BlurText from "../../components/text-animations/BlurText";
 function BlurTextPage() {
   return (
     <DemoLayout>
-      <TextDemoWrapper variant="title" /*color="#A855F7"*/>
+      <TextDemoWrapper variant="title" color="#A855F7">
         <BlurText
           text="Hello World"
           delay={200}

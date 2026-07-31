@@ -12,7 +12,7 @@ function SplitTextPage() {
         }}
       >
         <SplitText
-          text="Hello, React Bits!"
+          text="Hello, Split Text"
           delay={60}
           duration={1}
           ease="power3.out"

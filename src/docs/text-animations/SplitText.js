@@ -12,7 +12,7 @@ const handleAnimationComplete = () => {
 };
 
 <SplitText
-  text="Hello, you!"
+  text="Split Text!"
   className="text-2xl font-semibold text-center"
   delay={50}
   duration={1.25}
@@ -98,7 +98,7 @@ export default function SplitText({
   );
 }`;
 
-const styleCode = `.Split-text {
+const cssCode = `.split-text {
   margin: 0;
   color: #ffffff;
   font-size: clamp(2.5rem, 8vw, 7rem);
@@ -108,9 +108,8 @@ const styleCode = `.Split-text {
 }`;
 
 export const SplitTextDocs = {
-  title: "SplitText",
+  title: "Split Text",
   category: "Text Animations",
-
   install: {
     defaultManager: "npm",
     commands: installCommands,
@@ -124,15 +123,15 @@ export const SplitTextDocs = {
   code: [
     {
       id: "jsx",
-      label: "SplitText.jsx",
+      label: "jsx",
       language: "jsx",
       code: componentCode,
     },
     {
       id: "css",
-      label: "SplitText.css",
+      label: "css",
       language: "css",
-      code: styleCode,
+      code: cssCode,
     },
   ],
 };

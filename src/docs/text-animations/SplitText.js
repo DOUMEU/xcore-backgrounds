@@ -104,7 +104,7 @@ const cssCode = `.split-text {
   font-size: clamp(2.5rem, 8vw, 7rem);
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }`;
 
 export const SplitTextDocs = {

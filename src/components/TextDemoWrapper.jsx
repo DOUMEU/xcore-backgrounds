@@ -1,11 +1,17 @@
 function TextDemoWrapper({
   children,
   variant = "hero",
-  color = "#282A2E",
+  color = "#FFFFFF",
   align = "center",
   maxWidth = "1200px",
 }) {
   const variants = {
+    display: {
+      fontSize: "clamp(120px, 15vw, 300px)",
+      fontWeight: 800,
+      lineHeight: 1,
+    },
+
     hero: {
       fontSize: "clamp(64px, 8vw, 120px)",
       fontWeight: 700,
@@ -22,12 +28,6 @@ function TextDemoWrapper({
       fontSize: "clamp(14px, 2vw, 24px)",
       fontWeight: 400,
       lineHeight: 1.5,
-    },
-
-    display: {
-      fontSize: "clamp(120px, 15vw, 300px)",
-      fontWeight: 800,
-      lineHeight: 1,
     },
   };
 

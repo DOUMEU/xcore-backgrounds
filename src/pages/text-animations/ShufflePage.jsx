@@ -1,23 +1,16 @@
-import { useState } from "react";
 import DemoLayout from "../../components/DemoLayout";
 import TextDemoWrapper from "../../components/TextDemoWrapper";
-import ReplayButton from "../../components/ReplayButton";
 import Shuffle from "../../components/text-animations/Shuffle";
 
 function ShufflePage() {
-  const [replayKey, setReplayKey] = useState(0);
-
   const handleAnimationComplete = () => {
     console.log("Animation completed!");
   };
 
   return (
     <DemoLayout>
-      <ReplayButton onClick={() => setReplayKey((key) => key + 1)} />
-
       <TextDemoWrapper variant="title">
         <Shuffle
-          key={replayKey}
           text="Hello World"
           shuffleDirection="right"
           duration={0.35}

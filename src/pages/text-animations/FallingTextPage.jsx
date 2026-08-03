@@ -1,6 +1,5 @@
 import { useState } from "react";
 import DemoLayout from "../../components/DemoLayout";
-import { textVariants } from "../../components/TextDemoWrapper";
 import ReplayButton from "../../components/ReplayButton";
 import FallingText from "../../components/text-animations/FallingText";
 
@@ -34,7 +33,7 @@ function FallingTextPage() {
         backgroundColor="transparent"
         wireframes={false}
         gravity={0.56}
-        fontSize={textVariants.body.fontSize}
+        fontSize="2rem"
         mouseConstraintStiffness={0.9}
       />
     </DemoLayout>

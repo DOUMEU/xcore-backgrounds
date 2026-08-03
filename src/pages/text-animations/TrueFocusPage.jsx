@@ -1,4 +1,5 @@
 import DemoLayout from "../../components/DemoLayout";
+import TextDemoWrapper from "../../components/TextDemoWrapper";
 import TrueFocus from "../../components/text-animations/TrueFocus";
 
 function TrueFocusPage() {
@@ -8,14 +9,16 @@ function TrueFocusPage() {
 
   return (
     <DemoLayout>
-      <TrueFocus
-        sentence="True Focus"
-        manualMode={false}
-        blurAmount={5}
-        borderColor="#5227FF"
-        animationDuration={0.5}
-        pauseBetweenAnimations={1}
-      />
+      <TextDemoWrapper variant="title">
+        <TrueFocus
+          sentence="True Focus"
+          manualMode={false}
+          blurAmount={5}
+          borderColor="#5227FF"
+          animationDuration={0.5}
+          pauseBetweenAnimations={1}
+        />
+      </TextDemoWrapper>
     </DemoLayout>
   );
 }

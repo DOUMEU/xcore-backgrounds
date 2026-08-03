@@ -1,7 +1,7 @@
 .text-type {
   display: inline-block;
   white-space: pre-wrap;
-  font-size: 4rem;
+  font-size: inherit;
   font-weight: 700;
   color: #ffffff;
   text-align: center;

@@ -1,4 +1,4 @@
 .shiny-text {
   display: inline-block;
-  font-size: 80px;
+  font-size: inherit;
 }

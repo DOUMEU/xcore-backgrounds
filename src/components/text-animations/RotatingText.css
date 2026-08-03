@@ -8,7 +8,7 @@
   border-radius: 8px;
   background-color: #8e2c97;
 
-  font-size: 40px;
+  font-size: inherit;
   font-weight: 700;
   color: #ffffff;
 }

@@ -1,16 +1,11 @@
 import DemoLayout from "../../components/DemoLayout";
+import TextDemoWrapper from "../../components/TextDemoWrapper";
 import SplitText from "../../components/text-animations/SplitText";
 
 function SplitTextPage() {
   return (
     <DemoLayout>
-      <div
-        style={{
-          color: "#ffffff",
-          fontSize: "40px",
-          fontWeight: "700",
-        }}
-      >
+      <TextDemoWrapper variant="hero">
         <SplitText
           text="Hello, Split Text!"
           className="split-text-demo"
@@ -23,7 +18,7 @@ function SplitTextPage() {
           autoPlay
           autoPlayInterval={3}
         />
-      </div>
+      </TextDemoWrapper>
     </DemoLayout>
   );
 }

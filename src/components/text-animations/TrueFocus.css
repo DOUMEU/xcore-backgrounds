@@ -12,7 +12,7 @@
 .focus-word {
   position: relative;
   color: #ffffff;
-  font-size: 4rem;
+  font-size: inherit;
   font-weight: 700;
   cursor: pointer;
   transition:

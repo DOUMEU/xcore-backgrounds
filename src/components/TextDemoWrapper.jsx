@@ -6,13 +6,13 @@ export const textVariants = {
   },
 
   hero: {
-    fontSize: "clamp(64px, 8vw, 120px)",
+    fontSize: "clamp(56px, 8vw, 120px)",
     fontWeight: 700,
     lineHeight: 1.1,
   },
 
   title: {
-    fontSize: "clamp(24px, 6vw, 56px)",
+    fontSize: "clamp(24px, 4vw, 48px)",
     fontWeight: 700,
     lineHeight: 1.2,
   },

@@ -21,13 +21,14 @@
 
 .docs-copy-button {
   position: absolute;
-  top: 10px;
+  top: 22px;
   right: 10px;
+  transform: translateY(-50%);
   z-index: 2;
 
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   place-items: center;
 
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -46,11 +47,11 @@
 .docs-copy-button:hover {
   border-color: rgba(255, 255, 255, 0.28);
   background: #24202c;
-  transform: translateY(-1px);
+  transform: translateY(-50%) translateY(-1px);
 }
 
 .docs-copy-button:active {
-  transform: translateY(0) scale(0.96);
+  transform: translateY(-50%) scale(0.96);
 }
 
 .docs-copy-button.is-copied {

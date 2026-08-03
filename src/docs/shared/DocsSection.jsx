@@ -16,7 +16,9 @@ export default function DocsSection({
         </div>
       )}
 
-      {children ?? <CodeBlock code={code} language={language} label={label} />}
+      {children ?? (
+        <CodeBlock code={code} language={language} label={label ?? language} />
+      )}
     </section>
   );
 }

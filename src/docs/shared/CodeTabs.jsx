@@ -42,7 +42,11 @@ export default function CodeTabs({ files = [], title = "Code" }) {
         })}
       </div>
 
-      <CodeBlock code={activeFile.code} language={activeFile.language} />
+      <CodeBlock
+        code={activeFile.code}
+        language={activeFile.language}
+        label={activeFile.label}
+      />
     </section>
   );
 }

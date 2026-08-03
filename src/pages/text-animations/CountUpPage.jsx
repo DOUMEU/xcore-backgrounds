@@ -1,10 +1,17 @@
+import { useState } from "react";
 import DemoLayout from "../../components/DemoLayout";
+import ReplayButton from "../../components/ReplayButton";
 import CountUp from "../../components/text-animations/CountUp";
 
 function CountUpPage() {
+  const [replayKey, setReplayKey] = useState(0);
+
   return (
     <DemoLayout>
+      <ReplayButton onClick={() => setReplayKey((key) => key + 1)} />
+
       <CountUp
+        key={replayKey}
         from={0}
         to={500}
         separator=","

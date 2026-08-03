@@ -1,14 +1,20 @@
+import { useState } from "react";
 import DemoLayout from "../../components/DemoLayout";
+import { textVariants } from "../../components/TextDemoWrapper";
+import ReplayButton from "../../components/ReplayButton";
 import FallingText from "../../components/text-animations/FallingText";
 
 function FallingTextPage() {
+  const [replayKey, setReplayKey] = useState(0);
+
   return (
     <DemoLayout>
+      <ReplayButton onClick={() => setReplayKey((key) => key + 1)} />
+
       <FallingText
+        key={replayKey}
         text={`React Bits is a library of animated and interactive React components
-    designed to streamline UI development and simplify your workflow.
-    Build creative interfaces faster with playful motion responsive effects
-    smooth transitions dynamic typography and immersive interactions.`}
+    designed to streamline UI development and simplify your workflow.`}
         highlightWords={[
           "React",
           "animated",
@@ -28,7 +34,7 @@ function FallingTextPage() {
         backgroundColor="transparent"
         wireframes={false}
         gravity={0.56}
-        fontSize="2rem"
+        fontSize={textVariants.body.fontSize}
         mouseConstraintStiffness={0.9}
       />
     </DemoLayout>

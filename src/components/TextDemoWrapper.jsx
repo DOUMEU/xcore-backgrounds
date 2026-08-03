@@ -1,3 +1,29 @@
+export const textVariants = {
+  display: {
+    fontSize: "clamp(120px, 15vw, 300px)",
+    fontWeight: 800,
+    lineHeight: 1,
+  },
+
+  hero: {
+    fontSize: "clamp(64px, 8vw, 120px)",
+    fontWeight: 700,
+    lineHeight: 1.1,
+  },
+
+  title: {
+    fontSize: "clamp(24px, 6vw, 56px)",
+    fontWeight: 700,
+    lineHeight: 1.2,
+  },
+
+  body: {
+    fontSize: "clamp(14px, 2vw, 24px)",
+    fontWeight: 400,
+    lineHeight: 1.5,
+  },
+};
+
 function TextDemoWrapper({
   children,
   variant = "hero",
@@ -5,33 +31,7 @@ function TextDemoWrapper({
   align = "center",
   maxWidth = "1200px",
 }) {
-  const variants = {
-    display: {
-      fontSize: "clamp(120px, 15vw, 300px)",
-      fontWeight: 800,
-      lineHeight: 1,
-    },
-
-    hero: {
-      fontSize: "clamp(64px, 8vw, 120px)",
-      fontWeight: 700,
-      lineHeight: 1.1,
-    },
-
-    title: {
-      fontSize: "clamp(24px, 6vw, 80px)",
-      fontWeight: 700,
-      lineHeight: 1.2,
-    },
-
-    body: {
-      fontSize: "clamp(14px, 2vw, 24px)",
-      fontWeight: 400,
-      lineHeight: 1.5,
-    },
-  };
-
-  const style = variants[variant];
+  const style = textVariants[variant];
 
   return (
     <div

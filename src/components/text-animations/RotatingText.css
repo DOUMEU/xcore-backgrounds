@@ -27,6 +27,7 @@
 
 .text-rotate-word {
   display: inline-flex;
+  overflow: hidden;
 }
 
 .text-rotate-lines {

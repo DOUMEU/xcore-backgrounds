@@ -1,12 +1,12 @@
 .circular-text {
   margin: 0 auto;
   border-radius: 50%;
-  width: clamp(240px, 60vw, 800px);
+  width: clamp(240px, 40vw, 800px);
   position: relative;
-  height: clamp(240px, 60vw, 800px);
+  height: clamp(240px, 40vw, 800px);
   font-weight: bold;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
   cursor: pointer;
   transform-origin: 50% 50%;
@@ -20,6 +20,6 @@
   right: 0;
   top: 0;
   bottom: 0;
-  font-size: clamp(24px, 8vw, 80px);
+  font-size: clamp(24px, 4vw, 80px);
   transition: all 0.5s cubic-bezier(0, 0, 0, 1);
 }

@@ -1,0 +1,37 @@
+.replay-button {
+  position: fixed;
+  top: clamp(16px, 4vw, 32px);
+  right: clamp(16px, 4vw, 32px);
+  z-index: 20;
+
+  display: grid;
+  width: clamp(36px, 6vw, 44px);
+  height: clamp(36px, 6vw, 44px);
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 11px;
+  background: rgba(17, 16, 22, 0.92);
+  color: #e8e3ed;
+  cursor: pointer;
+
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.replay-button:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: #24202c;
+  transform: translateY(-1px);
+}
+
+.replay-button:active {
+  transform: translateY(0) scale(0.94);
+}
+
+.replay-button:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}

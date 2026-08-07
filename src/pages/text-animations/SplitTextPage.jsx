@@ -19,7 +19,7 @@ function SplitTextPage() {
           delay={60}
           duration={1}
           ease="power3.out"
-          splitType="chars"
+          splitType="lines"
           from={{ opacity: 0, y: 40 }}
           to={{ opacity: 1, y: 0 }}
         />

@@ -1,13 +1,7 @@
 import CodeBlock from "./CodeBlock";
 import "./DocsSection.css";
 
-export default function DocsSection({
-  title,
-  code,
-  language = "jsx",
-  label,
-  children,
-}) {
+export default function DocsSection({ title, code, language = "jsx", children }) {
   return (
     <section className="docs-content-section">
       {title && (
@@ -16,9 +10,7 @@ export default function DocsSection({
         </div>
       )}
 
-      {children ?? (
-        <CodeBlock code={code} language={language} label={label ?? language} />
-      )}
+      {children ?? <CodeBlock code={code} language={language} />}
     </section>
   );
 }

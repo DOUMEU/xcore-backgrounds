@@ -8,22 +8,10 @@
   color: #f3f0f7;
 }
 
-.docs-code-label {
-  min-height: 44px;
-  padding: 12px 64px 12px 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: #191620;
-  color: #c8c1d2;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-}
-
 .docs-copy-button {
   position: absolute;
-  top: 22px;
-  right: 10px;
-  transform: translateY(-50%);
+  top: 12px;
+  right: 12px;
   z-index: 2;
 
   display: grid;
@@ -47,11 +35,11 @@
 .docs-copy-button:hover {
   border-color: rgba(255, 255, 255, 0.28);
   background: #24202c;
-  transform: translateY(-50%) translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .docs-copy-button:active {
-  transform: translateY(-50%) scale(0.96);
+  transform: scale(0.96);
 }
 
 .docs-copy-button.is-copied {

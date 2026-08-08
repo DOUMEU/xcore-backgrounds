@@ -24,6 +24,7 @@ import GridMotionDocs from "../backgrounds/GridMotion";
 import GridScanDocs from "../backgrounds/GridScan";
 import HyperspeedDocs from "../backgrounds/Hyperspeed";
 import ImageTrailDocs from "../backgrounds/ImageTrail";
+import IridescenceDocs from "../backgrounds/Iridescence";
 import LaserFlowDocs from "../backgrounds/LaserFlow";
 import LetterGlitchDocs from "../backgrounds/LetterGlitch";
 import LightPillarDocs from "../backgrounds/LightPillar";
@@ -86,6 +87,7 @@ export const docsRegistry = {
   "backgrounds/grid-scan": GridScanDocs,
   "backgrounds/hyperspeed": HyperspeedDocs,
   "backgrounds/image-trail": ImageTrailDocs,
+  "backgrounds/iridescence": IridescenceDocs,
   "backgrounds/laser-flow": LaserFlowDocs,
   "backgrounds/letter-glitch": LetterGlitchDocs,
   "backgrounds/light-pillar": LightPillarDocs,

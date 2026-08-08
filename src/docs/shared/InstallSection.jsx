@@ -52,7 +52,7 @@ export default function InstallSection({
         })}
       </div>
 
-      <CodeBlock code={commands[activeManager]} language="bash" />
+      <CodeBlock code={commands[activeManager]} language="bash" compact />
     </section>
   );
 }

@@ -4,7 +4,7 @@ function BallpitPage() {
   return (
     <Ballpit
       count={100}
-      gravity={0.5}
+      gravity={0.1}
       friction={0.9975}
       wallBounce={0.95}
       followCursor

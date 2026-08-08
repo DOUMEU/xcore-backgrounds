@@ -32,7 +32,7 @@ function FallingTextPage() {
         trigger="hover"
         backgroundColor="transparent"
         wireframes={false}
-        gravity={0.56}
+        gravity={0.2}
         fontSize="1rem"
         mouseConstraintStiffness={0.9}
       />

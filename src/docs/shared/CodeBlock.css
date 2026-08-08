@@ -42,6 +42,22 @@
   transform: scale(0.96);
 }
 
+/* Single-line blocks (e.g. install commands): center the button on the row
+   instead of pinning it to the top, since a fixed top offset looks off-center
+   when the box is short. */
+.docs-code-block--compact .docs-copy-button {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.docs-code-block--compact .docs-copy-button:hover {
+  transform: translateY(-50%) translateY(-1px);
+}
+
+.docs-code-block--compact .docs-copy-button:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
 .docs-copy-button.is-copied {
   color: #b9f6cf;
 }

@@ -49,7 +49,12 @@ function CheckIcon() {
   );
 }
 
-export default function CodeBlock({ code = "", language = "jsx", className = "" }) {
+export default function CodeBlock({
+  code = "",
+  language = "jsx",
+  className = "",
+  compact = false,
+}) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -66,7 +71,9 @@ export default function CodeBlock({ code = "", language = "jsx", className = "" 
   };
 
   return (
-    <div className={`docs-code-block ${className}`.trim()}>
+    <div
+      className={`docs-code-block ${compact ? "docs-code-block--compact" : ""} ${className}`.trim()}
+    >
       <button
         type="button"
         className={`docs-copy-button ${copied ? "is-copied" : ""}`}

@@ -1,3 +1,40 @@
+import AcidSquaresDocs from "../backgrounds/AcidSquares";
+import AntigravityDocs from "../backgrounds/Antigravity";
+import AuroraDocs from "../backgrounds/Aurora";
+import BalatroDocs from "../backgrounds/Balatro";
+import BallpitDocs from "../backgrounds/Ballpit";
+import BeamsDocs from "../backgrounds/Beams";
+import ClickSparkDocs from "../backgrounds/ClickSpark";
+import ColorBendsDocs from "../backgrounds/ColorBends";
+import DarkVeilDocs from "../backgrounds/DarkVeil";
+import DitherDocs from "../backgrounds/Dither";
+import DotFieldDocs from "../backgrounds/DotField";
+import DotGridDocs from "../backgrounds/DotGrid";
+import EvilEyeDocs from "../backgrounds/EvilEye";
+import FaultyTerminalDocs from "../backgrounds/FaultyTerminal";
+import FerrofluidDocs from "../backgrounds/Ferrofluid";
+import FloatingLinesDocs from "../backgrounds/FloatingLines";
+import GalaxyDocs from "../backgrounds/Galaxy";
+import GhostCursorDocs from "../backgrounds/GhostCursor";
+import GradientBlindsDocs from "../backgrounds/GradientBlinds";
+import GradientWavesDocs from "../backgrounds/GradientWaves";
+import GrainientDocs from "../backgrounds/Grainient";
+import GridDistortionDocs from "../backgrounds/GridDistortion";
+import GridMotionDocs from "../backgrounds/GridMotion";
+import GridScanDocs from "../backgrounds/GridScan";
+import HyperspeedDocs from "../backgrounds/Hyperspeed";
+import ImageTrailDocs from "../backgrounds/ImageTrail";
+import LaserFlowDocs from "../backgrounds/LaserFlow";
+import LetterGlitchDocs from "../backgrounds/LetterGlitch";
+import LightPillarDocs from "../backgrounds/LightPillar";
+import LightRaysDocs from "../backgrounds/LightRays";
+import LightTunnelDocs from "../backgrounds/LightTunnel";
+import LightfallDocs from "../backgrounds/Lightfall";
+import LightningDocs from "../backgrounds/Lightning";
+import LineWaves from "../backgrounds/LineWaves";
+import LiquidChromeDocs from "../backgrounds/LiquidChrome";
+import LiquidEtherDocs from "../backgrounds/LiquidEther";
+
 import ASCIITextDocs from "../text-animations/ASCIIText";
 import BlurTextDocs from "../text-animations/BlurText";
 import CircularTextDocs from "../text-animations/CircularText";
@@ -23,6 +60,43 @@ import TrueFocusDocs from "../text-animations/TrueFocus";
 import VariableProximityDocs from "../text-animations/VariableProximity";
 
 export const docsRegistry = {
+  "backgrounds/acid-squares": AcidSquaresDocs,
+  "backgrounds/antigravity": AntigravityDocs,
+  "backgrounds/aurora": AuroraDocs,
+  "backgrounds/balatro": BalatroDocs,
+  "backgrounds/ballpit": BallpitDocs,
+  "backgrounds/beams": BeamsDocs,
+  "backgrounds/click-spark": ClickSparkDocs,
+  "backgrounds/color-bends": ColorBendsDocs,
+  "backgrounds/dark-veil": DarkVeilDocs,
+  "backgrounds/dither": DitherDocs,
+  "backgrounds/dot-field": DotFieldDocs,
+  "backgrounds/dot-grid": DotGridDocs,
+  "backgrounds/evil-eye": EvilEyeDocs,
+  "backgrounds/faulty-terminal": FaultyTerminalDocs,
+  "backgrounds/ferrofluid": FerrofluidDocs,
+  "backgrounds/floating-lines": FloatingLinesDocs,
+  "backgrounds/galaxy": GalaxyDocs,
+  "backgrounds/ghost-cursor": GhostCursorDocs,
+  "backgrounds/gradient-blinds": GradientBlindsDocs,
+  "backgrounds/gradient-waves": GradientWavesDocs,
+  "backgrounds/grainient": GrainientDocs,
+  "backgrounds/grid-distortion": GridDistortionDocs,
+  "backgrounds/grid-motion": GridMotionDocs,
+  "backgrounds/grid-scan": GridScanDocs,
+  "backgrounds/hyperspeed": HyperspeedDocs,
+  "backgrounds/image-trail": ImageTrailDocs,
+  "backgrounds/laser-flow": LaserFlowDocs,
+  "backgrounds/letter-glitch": LetterGlitchDocs,
+  "backgrounds/light-pillar": LightPillarDocs,
+  "backgrounds/light-rays": LightRaysDocs,
+  "backgrounds/light-tunnel": LightTunnelDocs,
+  "backgrounds/lightfall": LightfallDocs,
+  "backgrounds/lightning": LightningDocs,
+  "backgrounds/line-waves": LineWaves,
+  "backgrounds/liquid-chrome": LiquidChromeDocs,
+  "backgrounds/liquid-ether": LiquidEtherDocs,
+
   "text-animations/ascii-text": ASCIITextDocs,
   "text-animations/blur-text": BlurTextDocs,
   "text-animations/circular-text": CircularTextDocs,

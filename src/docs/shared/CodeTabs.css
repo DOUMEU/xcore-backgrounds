@@ -5,11 +5,15 @@
 
 .docs-file-tabs {
   display: flex;
-  align-items: flex-end;
-  gap: 4px;
-
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 12px;
+  padding: 4px;
   overflow-x: auto;
-  overflow-y: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: #111;
 
   scrollbar-width: none;
 }
@@ -19,13 +23,13 @@
 }
 
 .docs-file-tab {
-  position: relative;
-  flex: 0 0 auto;
-  padding: 10px 14px 12px;
+  min-width: 68px;
+  padding: 9px 14px;
 
   border: 0;
+  border-radius: 9px;
   background: transparent;
-  color: #8f8899;
+  color: #B7BBC2;
 
   font: inherit;
   font-size: 13px;
@@ -34,40 +38,27 @@
 
   cursor: pointer;
   transition:
+    background-color 160ms ease,
     color 160ms ease,
-    background-color 160ms ease;
+    transform 160ms ease;
 }
 
 .docs-file-tab:hover {
-  color: #ded8e6;
-  background: rgba(255, 255, 255, 0.035);
+  color: #e7e1ed;
 }
 
-.docs-file-tab::after {
-  position: absolute;
-  right: 12px;
-  bottom: -1px;
-  left: 12px;
-
-  height: 2px;
-  border-radius: 999px;
-  background: transparent;
-
-  content: "";
-  transition: background-color 160ms ease;
+.docs-file-tab:active {
+  transform: scale(0.97);
 }
 
 .docs-file-tab.is-active {
+  background: #1A1B1E;
   color: #ffffff;
-}
-
-.docs-file-tab.is-active::after {
-  background: #a78bfa;
 }
 
 .docs-file-tab:focus-visible {
   outline: 2px solid #a78bfa;
-  outline-offset: -2px;
+  outline-offset: 1px;
 }
 
 @media (max-width: 640px) {

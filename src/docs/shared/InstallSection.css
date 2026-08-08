@@ -28,7 +28,7 @@
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  background: #17141d;
+  background: #111;
 }
 
 .docs-manager-tab {
@@ -38,7 +38,7 @@
   border: 0;
   border-radius: 9px;
   background: transparent;
-  color: #948d9f;
+  color: #B7BBC2;
 
   font: inherit;
   font-size: 13px;
@@ -61,7 +61,7 @@
 }
 
 .docs-manager-tab.is-active {
-  background: #2a2533;
+  background: #1A1B1E;
   color: #ffffff;
 }
 

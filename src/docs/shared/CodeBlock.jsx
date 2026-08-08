@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./CodeBlock.css";
+
+const COLLAPSE_HEIGHT = 400;
 
 function CopyIcon() {
   return (
@@ -56,6 +58,15 @@ export default function CodeBlock({
   compact = false,
 }) {
   const [copied, setCopied] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [overflowing, setOverflowing] = useState(false);
+  const preRef = useRef(null);
+
+  useEffect(() => {
+    const el = preRef.current;
+    if (!el) return;
+    setOverflowing(el.scrollHeight > COLLAPSE_HEIGHT);
+  }, [code]);
 
   const handleCopy = async () => {
     try {
@@ -69,6 +80,8 @@ export default function CodeBlock({
       console.error("코드 복사에 실패했습니다.", error);
     }
   };
+
+  const collapsed = overflowing && !expanded;
 
   return (
     <div
@@ -84,9 +97,25 @@ export default function CodeBlock({
         {copied ? <CheckIcon /> : <CopyIcon />}
       </button>
 
-      <pre className="docs-code-pre">
+      <pre
+        ref={preRef}
+        className={`docs-code-pre ${collapsed ? "is-collapsed" : ""}`.trim()}
+      >
         <code className={`language-${language}`}>{code}</code>
       </pre>
+
+      {collapsed && (
+        <>
+          <div className="docs-code-fade" />
+          <button
+            type="button"
+            className="docs-expand-button"
+            onClick={() => setExpanded(true)}
+          >
+            Expand Snippet
+          </button>
+        </>
+      )}
     </div>
   );
 }

@@ -4,7 +4,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
-  background: #111016;
+  background: #282A2E;
   color: #f3f0f7;
 }
 
@@ -19,9 +19,9 @@
   height: 34px;
   place-items: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 11px;
-  background: rgba(17, 16, 22, 0.92);
+  border: 1px solid rgba(75, 79, 89, 1);
+  border-radius: 8px;
+  background: rgba(26, 27, 30, 0);
   color: #e8e3ed;
   cursor: pointer;
 
@@ -33,8 +33,7 @@
 }
 
 .docs-copy-button:hover {
-  border-color: rgba(255, 255, 255, 0.28);
-  background: #24202c;
+  background: rgba(26, 27, 30, 1);
   transform: translateY(-1px);
 }
 
@@ -88,4 +87,57 @@
 .docs-code-pre code {
   font-family: inherit;
   white-space: pre;
+}
+
+.docs-code-pre.is-collapsed {
+  max-height: 400px;
+  overflow-y: hidden;
+}
+
+.docs-code-fade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+
+  background: linear-gradient(rgba(17, 16, 22, 0), #282A2E);
+  pointer-events: none;
+}
+
+.docs-expand-button {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+
+  border: 1px solid rgba(75, 79, 89, 1);
+  border-radius: 8px;
+  background: rgba(26, 27, 30, 0);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 14px;
+  cursor: pointer;
+
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.docs-expand-button:hover {
+  background: rgba(26, 27, 30, 1);
+}
+
+.docs-expand-button:active {
+  transform: scale(0.97);
+}
+
+.docs-expand-button:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
 }

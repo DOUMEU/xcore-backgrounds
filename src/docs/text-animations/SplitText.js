@@ -1,3 +1,8 @@
+// 실제 컴포넌트 파일을 텍스트 그대로 가져옵니다 (Vite의 `?raw` 기능).
+// 이렇게 하면 문서 코드가 실제 소스 코드와 항상 정확히 일치하고,
+// 손으로 복붙할 필요도, 백틱이나 ${...}를 이스케이프할 필요도 없습니다.
+import componentCode from "../../components/text-animations/SplitText.jsx?raw";
+
 const installCommands = {
   pnpm: "pnpm dlx shadcn@latest add @react-bits/SplitText-JS-CSS",
   npm: "npx shadcn@latest add @react-bits/SplitText-JS-CSS",
@@ -8,11 +13,11 @@ const installCommands = {
 const usageCode = `import SplitText from "./SplitText";
 
 const handleAnimationComplete = () => {
-  console.log("All letters have animated!");
+  console.log('All letters have animated!');
 };
 
 <SplitText
-  text="Split Text!"
+  text="Hello, you!"
   className="text-2xl font-semibold text-center"
   delay={50}
   duration={1.25}
@@ -27,91 +32,15 @@ const handleAnimationComplete = () => {
   showCallback
 />`;
 
-const componentCode = `import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { SplitText as GSAPSplitText } from "gsap/SplitText";
-import "./SplitText.css";
-
-gsap.registerPlugin(GSAPSplitText);
-
-export default function SplitText({
-  text,
-  className = "",
-  delay = 50,
-  duration = 1.25,
-  ease = "power3.out",
-  splitType = "chars",
-  from = { opacity: 0, y: 40 },
-  to = { opacity: 1, y: 0 },
-  threshold = 0.1,
-  rootMargin = "-100px",
-  textAlign = "center",
-  onLetterAnimationComplete,
-}) {
-  const textRef = useRef(null);
-
-  useEffect(() => {
-    if (!textRef.current) return;
-
-    const split = new GSAPSplitText(textRef.current, {
-      type: splitType,
-    });
-
-    const targets = split[splitType];
-
-    gsap.fromTo(
-      targets,
-      from,
-      {
-        ...to,
-        duration,
-        ease,
-        stagger: delay / 1000,
-        onComplete: onLetterAnimationComplete,
-      }
-    );
-
-    return () => {
-      split.revert();
-    };
-  }, [
-    text,
-    delay,
-    duration,
-    ease,
-    splitType,
-    from,
-    to,
-    threshold,
-    rootMargin,
-    onLetterAnimationComplete,
-  ]);
-
-  return (
-    <p
-      ref={textRef}
-      className={\`split-text \${className}\`}
-      style={{ textAlign }}
-    >
-      {text}
-    </p>
-  );
-}`;
-
-const cssCode = `.split-text {
-  margin: 0;
-  color: #ffffff;
-  font-size: clamp(2.5rem, 8vw, 7rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}`;
+// TODO: 이 컴포넌트는 별도 CSS 파일이 없습니다 — 나중에 CSS 파일이 생기면
+// 위와 똑같이 `?raw` import로 바꾸거나, 짧은 예시 코드를 직접 넣어주세요.
+const cssCode = `-`;
 
 export const SplitTextDocs = {
   title: "Split Text",
-  category: "Text Animations",
+  category: "Text Animations Code",
   install: {
-    defaultManager: "npm",
+    defaultManager: "pnpm",
     commands: installCommands,
   },
 

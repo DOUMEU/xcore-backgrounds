@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 80px 32px 120px;
-  background: #0d0c10;
+  background: #1A1B1E;
   color: #ffffff;
 
 
@@ -23,7 +23,7 @@
 .xcore-docs__category {
   display: block;
   margin-bottom: 12px;
-  color: #a39aaa;
+  color: #8F95A1;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.4;
